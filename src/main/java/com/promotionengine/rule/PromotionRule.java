@@ -10,4 +10,7 @@ public abstract class PromotionRule {
 
     public abstract void execute(Cart cart);
 
+    protected static boolean isEmptyCart(Cart cart) {
+        return (cart == null) || cart.items == null || cart.items.size() == 0;
+    }
 }

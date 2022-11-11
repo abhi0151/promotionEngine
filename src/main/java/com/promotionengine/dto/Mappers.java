@@ -4,11 +4,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 public class Mappers {
-    public static SKUItemDTO toDTO(SKUitem skuItem) {
-        return new SKUItemDTO(skuItem.id, skuItem.unitPrice);
+    public static SKUitemDTO toDTO(SKUitem skuItem) {
+        return new SKUitemDTO(skuItem.id, skuItem.unitPrice);
     }
 
-    public static SKUitem toDAO(SKUItemDTO sKUitemDTO) {
+    public static SKUitem toDAO(SKUitemDTO sKUitemDTO) {
         return new SKUitem(sKUitemDTO.id, sKUitemDTO.unitPrice);
     }
 

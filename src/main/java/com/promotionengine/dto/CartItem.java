@@ -1,6 +1,11 @@
 package com.promotionengine.dto;
 
 public class CartItem {
+
+    public void setPromotionApplied(boolean promotionApplied) {
+        this.promotionApplied = promotionApplied;
+    }
+
     public SKUitem item;
     public boolean promotionApplied;
     public double finalPrice;
