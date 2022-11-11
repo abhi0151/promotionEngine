@@ -22,16 +22,13 @@ public class NItemForFixedPricePromotion extends PromotionRule {
 
     @Override
     public void execute(Cart cart) {
-        int count =numberOfItems;
+        int count = numberOfItems;
         double discountItemPrice = fixedPrice / numberOfItems;
-//        float residue = 0f;
         while (isApplicable(cart)) {
-//            residue = fixedPrice - (numberOfItems * discountItemPrice);
             for (CartItem cartItem : cart.items.stream().filter(i -> !i.isPromotionApplied() && sku.equals(i.item.id)).toList()) {
                 cartItem.finalPrice = discountItemPrice;
                 cartItem.promotionApplied = true;
-//                residue = 0f;
-                if(count ==1)
+                if (count == 1)
                     break;
                 count--;
             }
